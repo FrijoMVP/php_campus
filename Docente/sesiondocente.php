@@ -9,10 +9,8 @@
 
 if ($resultado->num_rows > 0) {
     $fila = $resultado->fetch_assoc();
-    
-    // Guardas automáticamente sus datos en la sesión
-    $_SESSION['id'] = $fila['id']; // ID real de la BD
-    $_SESSION['usuario'] = $fila['usuario']; // Nombre real
+    $_SESSION['id'] = $fila['id']; 
+    $_SESSION['usuario'] = $fila['usuario'];
     echo '<script>
         alert("Bienvenido ADMIN")
         self.location="campus_docente.php"
